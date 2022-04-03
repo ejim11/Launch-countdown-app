@@ -15,7 +15,7 @@
 
 ### Screenshot
 
-![](./src/assets/screenshot.PNG)
+![](./src/assets/screenshot1.PNG)
 
 ### Links
 
