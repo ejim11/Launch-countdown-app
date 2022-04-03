@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ejim11.github.io/",
   "name": "my-launch-countdown",
+  "homepage": "https://ejim11.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
