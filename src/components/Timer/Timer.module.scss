@@ -1,0 +1,39 @@
+@import "../sass/base";
+
+.flipClock {
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 14rem);
+  grid-column-gap: 1.5rem;
+  justify-content: center;
+
+  @media only screen and(max-width: $bp-larger) {
+    grid-template-columns: repeat(4, 11rem);
+  }
+}
+
+.timeBox {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 2rem 0rem;
+    color: $color-white;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+    animation: moveUp 500ms ease-in;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

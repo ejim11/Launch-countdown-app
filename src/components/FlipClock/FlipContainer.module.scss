@@ -1,0 +1,11 @@
+@import "../sass//base";
+
+.flipUnitContainer {
+  display: block;
+  position: relative;
+  height: 12rem;
+  perspective-origin: 50% 50%;
+  perspective: 200px;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 10px -10px #222;
+}

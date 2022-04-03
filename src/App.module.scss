@@ -1,0 +1,85 @@
+@import "./components/sass/base";
+
+// GENERAL  RESET STYLING
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 80%; //1rem = 13px
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 62.5%; //1rem = 10px
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%; //1rem = 8px
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 37.5%; //1rem = 6px
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 28.125%; //1rem = 4.5px
+  }
+}
+
+body {
+  font-family: $font-display;
+  background: url("./assets/bg-stars.svg") $color-secondary-3;
+  background-size: cover;
+  height: 100vh;
+}
+
+main {
+  background: url("./assets/pattern-hills.svg") no-repeat 0 bottom;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: contain;
+}
+
+h1 {
+  color: $color-white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-top: 6rem;
+  animation: moveDown 600ms ease-in;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 12rem;
+  }
+}
+
+.content {
+  display: flex;
+  padding: 1rem;
+}
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 8rem;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

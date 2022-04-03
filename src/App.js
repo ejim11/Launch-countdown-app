@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+import classes from "./App.module.scss";
+import Timer from "./components/Timer/TImer";
+import Icons from "./components/UI/Icons";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.StrictMode>
+      <main>
+        <h1>we're launching soon</h1>
+        <div className={classes.content}>
+          <Timer />
+        </div>
+        <div className={classes.footer}>
+          <Icons />
+        </div>
+      </main>
+    </React.StrictMode>
   );
-}
+};
 
 export default App;

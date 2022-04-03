@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Frontend Mentor - Launch countdown timer solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+### Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![](./src/assets/screenshot.PNG)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Links
 
-### `npm test`
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## My process
 
-### `npm run build`
+### Built with
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- SCSS
+- Flexbox
+- CSS Grid
+- Laptop-first workflow
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### What I learned
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I learnt how to create a timer with react and also make the flip animation with react and css animations.
 
-### `npm run eject`
+```scss
+.timeBox {
+  display: flex;
+  flex-direction: column;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  p {
+    margin: 2rem 0rem;
+    color: $color-white;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+    animation: moveUp 500ms ease-in;
+  }
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```react
+ const [timeLeft, setTimeLeft] = useState({
+    day: 0,
+    daysShuffle: true,
+    hour: 0,
+    hoursShuffle: true,
+    minute: 0,
+    minutesShuffle: true,
+    second: 0,
+    secondsShuffle: true,
+  });
+  const calculateTimeLeft = () => {
+    totalSeconds = Math.trunc((new Date("04.18.2022") - new Date()) / 1000);
 
-## Learn More
+    const timeLeftNow = {
+      day: String(Math.trunc(totalSeconds / (60 * 60 * 24))).padStart(2, 0),
+      hour: String(Math.trunc((totalSeconds / (60 * 60)) % 24)).padStart(2, 0),
+      minute: String(Math.trunc((totalSeconds / 60) % 60)).padStart(2, 0),
+      second: String(Math.trunc(totalSeconds % 60)).padStart(2, 0),
+    };
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    if (timeLeft.day !== timeLeftNow.day) {
+      setTimeLeft((prevState) => {
+        const day = timeLeftNow.day;
+        // console.log(timeLeft);
+        const daysShuffle = !timeLeft.daysShuffle;
+        return {
+          ...prevState,
+          day,
+          daysShuffle,
+        };
+      });
+    }
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Continued development
 
-### Code Splitting
+I would love to improve my react skills by learning more about logic, props and states. I would also love to make my sites more animated and alive.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Author
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@favourejim56](https://www.twitter.com/favourejim56)
