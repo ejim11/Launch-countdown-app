@@ -4,7 +4,7 @@ import StaticCard from "./StaticCard";
 
 import classes from "./FlipContainer.module.scss";
 
-const FlipContainer = ({ digit, shuffle, unit }) => {
+const FlipContainer = ({ digit, shuffle }) => {
   // assign digit values
   let currentDigit = digit;
   let previousDigit = String(+digit + 1).padStart(2, 0);

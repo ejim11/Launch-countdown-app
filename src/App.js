@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./App.module.scss";
-import Timer from "./components/Timer/TImer";
+import Timer from "./components/Timer/Timer";
 import Icons from "./components/UI/Icons";
 
 const App = () => {
