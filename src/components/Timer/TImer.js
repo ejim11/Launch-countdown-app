@@ -93,7 +93,7 @@ const Timer = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       calculateTimeLeft();
-    }, 950);
+    }, 1000);
 
     return () => {
       clearInterval(timer);
