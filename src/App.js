@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import classes from "./App.module.scss";
 import Timer from "./components/Timer/Timer";
@@ -6,7 +6,7 @@ import Icons from "./components/UI/Icons";
 
 const App = () => {
   return (
-    <React.StrictMode>
+    <Fragment>
       <main>
         <h1>we're launching soon</h1>
         <div className={classes.content}>
@@ -16,7 +16,7 @@ const App = () => {
           <Icons />
         </div>
       </main>
-    </React.StrictMode>
+    </Fragment>
   );
 };
 
