@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/my-launch-countdown-app/static/css/main.dd76f8a1.css",
-    "main.js": "/my-launch-countdown-app/static/js/main.5c045a0e.js",
+    "main.js": "/my-launch-countdown-app/static/js/main.03bb9c2b.js",
     "static/media/bg-stars.svg": "/my-launch-countdown-app/static/media/bg-stars.166881a1c03d6b1239f5.svg",
     "static/media/sprite.svg": "/my-launch-countdown-app/static/media/sprite.6b315c8ef61207c812014800dfcb5b85.svg",
     "index.html": "/my-launch-countdown-app/index.html",
     "static/media/pattern-hills.svg": "/my-launch-countdown-app/static/media/pattern-hills.815d688fd937623063b5.svg",
     "main.dd76f8a1.css.map": "/my-launch-countdown-app/static/css/main.dd76f8a1.css.map",
-    "main.5c045a0e.js.map": "/my-launch-countdown-app/static/js/main.5c045a0e.js.map"
+    "main.03bb9c2b.js.map": "/my-launch-countdown-app/static/js/main.03bb9c2b.js.map"
   },
   "entrypoints": [
     "static/css/main.dd76f8a1.css",
-    "static/js/main.5c045a0e.js"
+    "static/js/main.03bb9c2b.js"
   ]
 }
