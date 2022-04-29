@@ -24,7 +24,7 @@ const Timer = () => {
   const calculateTimeLeft = () => {
     // diff in time in seconds
     totalSeconds = Math.trunc(
-      (new Date("04.18.2022".replace(/\s/, "T")) - new Date()) / 1000
+      (new Date("08.18.2022".replace(/\s/, "T")) - new Date()) / 1000
     );
 
     // inputting time
